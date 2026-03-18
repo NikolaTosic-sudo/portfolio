@@ -58,11 +58,11 @@
 				<div class="col-4 col-12-medium col-6-large">
 					<span class="image fit">
 						<a href="https://nikolatosic-sudo-film-search.netlify.app/"
-							target="_blank">
+							target="_blank" class="track-link" link-name="film-site">
 							<img src="images/film_search.png" alt="film_search" />
 						</a>
 					</span>
-					<a href="https://nikolatosic-sudo-film-search.netlify.app/" target="_blank">
+					<a href="https://nikolatosic-sudo-film-search.netlify.app/" link-name="film-site" class="track-link" target="_blank">
 						<h3>Film Search (React)</h3>
 					</a>
 					<p>
@@ -72,22 +72,22 @@
 					<ul class="actions special">
 						<li>
 							<a href="https://nikolatosic-sudo-film-search.netlify.app/"
-								target="_blank" class="button primary">Site</a>
+								target="_blank" class="button primary track-link" link-name="film-site">Site</a>
 						</li>
 						<li>
 							<a href="https://github.com/NikolaTosic-sudo/film-search"
-								target="_blank" class="button">Code</a>
+								target="_blank" class="button track-link" link-name="film-code">Code</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-4 col-12-medium col-6-large">
 					<span class="image fit">
 						<a href="https://github.com/NikolaTosic-sudo/level-up"
-							target="_blank">
+							target="_blank" class="track-link" link-name="levelup-code">
 							<img src="images/gopher-react.png" alt="" />
 						</a>
 					</span>
-					<a href="https://github.com/NikolaTosic-sudo/level-up" target="_blank">
+					<a href="https://github.com/NikolaTosic-sudo/level-up" link-name="levelup-code" class="track-link" target="_blank">
 						<h3>Level-Up (Go | React)</h3>
 					</a>
 					<p>Play your life like a video game, a real RPG where you are the main character, and your life is the story</p>
@@ -96,7 +96,8 @@
 							<a 
                   href="https://youtube.com/playlist?list=PLOb9vsAG4CGSa1pPAnjQvW7uoZ7HFMHzD&si=LI2xRlfxITR87pAi"
                   target="_blank"
-                  class="button youtube"
+                  class="button youtube track-link"
+                  link-name="levelup-youtube"
               >
                   YouTube
               </a>
@@ -104,18 +105,18 @@
 						<li>
 							<a target="_blank"
 								href="https://github.com/NikolaTosic-sudo/level-up"
-								class="button">Code</a>
+								class="button track-link" link-name="levelup-code">Code</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-4 col-12-medium col-6-large">
 					<span class="image fit">
 						<a href="https://github.com/NikolaTosic-sudo/chess-live"
-							target="_blank">
+							target="_blank" class="track-link" link-name="chess-code">
 							<img src="images/gopher-chess.png" alt="" />
 						</a>
 					</span>
-					<a href="https://github.com/NikolaTosic-sudo/chess-live" target="_blank">
+					<a href="https://github.com/NikolaTosic-sudo/chess-live" link-name="chess-code" class="track-link" target="_blank">
 						<h3>Chess Live (Go | Templ | Htmx)</h3>
 					</a>
 					<p>Play locally, online, signup, </br>play games and review them.</p>
@@ -126,7 +127,7 @@
 						<li>
 							<a target="_blank"
 								href="https://github.com/NikolaTosic-sudo/chess-live"
-								class="button">Code</a>
+								class="button track-link" link-name="chess-code">Code</a>
 						</li>
 					</ul>
 				</div>
@@ -275,6 +276,25 @@
 	</section>
 
 	<!-- Scripts -->
+    <script>
+      document.querySelectorAll(".track-link").forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var url = link.href;
+          e.preventDefault();
+          var linkName = link.attributes["link-name"]
+          if (linkName) {
+            gtag("event", "link-click", {
+              link_name: linkName.value,
+            })
+
+            setTimeout(function() {
+              window.location.href = url;
+            }, 150)
+          }
+          
+        })
+      })
+    </script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
