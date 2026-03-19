@@ -281,19 +281,19 @@
         link.addEventListener('click', function(e) {
           var url = link.href;
           e.preventDefault();
-          var linkName = link.attributes["link-name"]
+          var linkName = link.attributes["link-name"];
           if (linkName) {
             gtag("event", "link_click", {
               link_name: linkName.value,
-            })
+            });
 
             setTimeout(function() {
-              window.location.href = url;
-            }, 150)
-          }
+              window.open(url, "_blank");
+            }, 150);
+          };
           
-        })
-      })
+        });
+      });
     </script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
