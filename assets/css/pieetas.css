@@ -4027,10 +4027,6 @@ body.is-touch .poptrox-popup .closer {
     display: none;
   }
 
-  .poptrox-popup .pic {
-    min-height: 279px;
-  }
-
   .poptrox-popup .nav-next:before,
   .poptrox-popup .nav-previous:before {
     background-size: 50%;
@@ -4079,4 +4075,3 @@ body.is-touch .poptrox-popup .closer {
     width: 10em;
   }
 }
-
