@@ -1,21 +1,64 @@
 /* Header */
 
-	body.is-preload #header .inner {
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		opacity: 1;
-	}
+body.is-preload #header .inner {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+}
 
-		body.is-preload #header .inner .actions {
-			-moz-transform: none;
-			-webkit-transform: none;
-			-ms-transform: none;
-			transform: none;
-			opacity: 1;
-		}
+body.is-preload #header .inner .actions {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+}
 
-	body.is-preload #header:after {
-		opacity: 0;
-	}
+body.is-preload #header:after {
+  opacity: 0;
+}
+
+/* Wrapper */
+
+#wrapper {
+  opacity: 1 !important;
+}
+
+/* Nav */
+
+#nav a {
+  opacity: 1;
+}
+
+#nav a:before,
+#nav a:after {
+  display: none;
+}
+
+#nav a span {
+  top: 0;
+  opacity: 1;
+}
+
+#nav a span:after {
+  display: none;
+}
+
+/* Main */
+
+#main {
+  background: none;
+  box-shadow: none;
+}
+
+#main > .panel {
+  background: #ffffff;
+  margin-bottom: 2em;
+}
+
+#main > .panel:last-child {
+  margin-bottom: 0;
+}
+

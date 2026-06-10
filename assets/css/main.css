@@ -3272,8 +3272,8 @@ body.is-preload #header:after {
 
 #footer {
   padding: 6em 0 6em 0;
-  background-color: #4686a0;
   color: rgba(255, 255, 255, 0.75);
+  background-color: #4686a0;
   background-attachment: fixed, fixed, fixed;
   background-image:
     url("images/overlay2.png"), url("images/overlay4.svg"),

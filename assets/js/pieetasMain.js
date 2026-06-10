@@ -1,8 +1,3 @@
-/*
-	Gravity by Chipper Technology
-  chippertechnology.com
-*/
-
 function scrollToElement(elementId) {
   const element = document.getElementById(elementId);
   const body = document.body;
