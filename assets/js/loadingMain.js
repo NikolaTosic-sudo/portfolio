@@ -110,23 +110,20 @@ function changeView(href) {
       $window.scrollTop(0);
 
       // Delay.
-      window.setTimeout(
-        function () {
-          // Activate target panel.
-          $panel.removeClass("inactive");
+      window.setTimeout(function () {
+        // Activate target panel.
+        $panel.removeClass("inactive");
 
-          // Clear max/min height.
-          $main.css("max-height", "").css("min-height", "");
+        // Clear max/min height.
+        $main.css("max-height", "").css("min-height", "");
 
-          // IE: Refresh.
-          $window.triggerHandler("--refresh");
+        // IE: Refresh.
+        $window.triggerHandler("--refresh");
 
-          // Unlock.
-          locked = false;
-        },
-        breakpoints.active("small") ? 0 : 500,
-      );
-    }, 250);
+        // Unlock.
+        locked = false;
+      }, 0);
+    }, 200);
   });
 
   // IE: Fixes.
