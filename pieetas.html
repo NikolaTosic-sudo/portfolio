@@ -28,6 +28,7 @@
 
     gtag("config", "G-93FTQYHW3W");
   </script>
+
   <body class="landing is-preload">
     <!-- Header -->
 
@@ -328,9 +329,48 @@
     <script src="assets/js/jquery.poptrox.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
-    <!-- <script src="assets/js/util.js"></script> -->
-    <!-- <script src="assets/js/main.js"></script> -->
     <script src="assets/js/pieetasUtil.js"></script>
     <script src="assets/js/pieetasMain.js"></script>
+
+
+    <script>
+      const sections = [
+        "part1",
+        "testimonials",
+        "part2",
+        "work",
+        "guarantee",
+      ];
+
+      const viewed = {};
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !viewed[entry.target.id]) {
+              viewed[entry.target.id] = true;
+
+              gtag("event", "section_view", {
+                section: entry.target.id,
+                debug_mode: true,
+              });
+
+              console.log("Viewed:", entry.target.id);
+            }
+          });
+        },
+        {
+          threshold: 0.6,
+        }
+      );
+
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+
+        if (el) {
+          observer.observe(el);
+        }
+      });
+    </script>
   </body>
 </html>
