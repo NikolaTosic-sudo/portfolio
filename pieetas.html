@@ -342,30 +342,36 @@
         "guarantee",
       ];
 
-      const viewed = {};
+      const isMobile = window.innerWidth < 768;
 
       const observer = new IntersectionObserver(
-        (entries) => {
+        (entries, observer) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting && !viewed[entry.target.id]) {
-              viewed[entry.target.id] = true;
+            if (!entry.isIntersecting) return;
 
-              gtag("event", `viewed_${entry.target.id}`, {
-                section: entry.target.id,
-              });
-            }
+            const sectionId = entry.target.id;
+
+            gtag("event", `view_${sectionId}`, {
+              section: sectionId,
+              device_type: isMobile ? "mobile" : "desktop",
+            });
+
+            observer.unobserve(entry.target);
           });
         },
         {
-          threshold: 0.6,
+          rootMargin: isMobile
+            ? "-45% 0px -45% 0px"
+            : "-20% 0px -56% 0px",
+          threshold: 0,
         }
       );
 
       sections.forEach((id) => {
-        const el = document.getElementById(id);
+        const section = document.getElementById(id);
 
-        if (el) {
-          observer.observe(el);
+        if (section) {
+          observer.observe(section);
         }
       });
     </script>
