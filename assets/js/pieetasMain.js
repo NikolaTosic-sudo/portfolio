@@ -1,8 +1,11 @@
-function scrollToElement(elementId) {
+function scrollToElement(elementId, start) {
   const element = document.getElementById(elementId);
   const body = document.body;
-  if (element) {
+
+  if (element && !start) {
     element.scrollIntoView({ behavior: "smooth", block: "center" });
+  } else if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
   }
 
   if (body) {
