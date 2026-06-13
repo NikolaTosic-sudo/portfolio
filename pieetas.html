@@ -350,12 +350,9 @@
             if (entry.isIntersecting && !viewed[entry.target.id]) {
               viewed[entry.target.id] = true;
 
-              gtag("event", "section_view", {
+              gtag("event", `viewed_${entry.target.id}`, {
                 section: entry.target.id,
-                debug_mode: true,
               });
-
-              console.log("Viewed:", entry.target.id);
             }
           });
         },
