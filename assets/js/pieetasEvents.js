@@ -1,4 +1,11 @@
-const sections = ["part1", "testimonials", "part2", "work", "guarantee"];
+const sections = [
+  "part1",
+  "testimonials",
+  "part2",
+  "work",
+  "guarantee",
+  "contact",
+];
 
 const isMobile = window.innerWidth < 768;
 

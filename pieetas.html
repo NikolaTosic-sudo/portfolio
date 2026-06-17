@@ -8,6 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/pieetas.css" />
 	<script src="https://kit.fontawesome.com/bf1ba4899d.js" crossorigin="anonymous"></script>
+  <!-- Calendly link widget begin -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
+    async></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-93FTQYHW3W"></script>
@@ -31,20 +35,15 @@
 
 		<nav id="nav">
 			<ul>
-				<li><a href="pieetas.html">Home</a></li>
 				<li><a target="part1" onclick="scrollToElement('part1', true)">System</a></li>
 				<li><a target="testimonials" onclick="scrollToElement('testimonials')">Testimonials</a></li>
 				<li><a target="part2" onclick="scrollToElement('part2')">Optimize</a></li>
 				<li><a target="work" onclick="scrollToElement('work')">Work Done</a></li>
 				<li><a target="guarantee" onclick="scrollToElement('guarantee')">Guarantee</a></li>
+				<li><a target="contact" onclick="scrollToElement('contact')">Contact</a></li>
 			</ul>
 		</nav>
 	</div>
-	<!-- Calendly inline widget begin -->
-	<div class="calendly-inline-widget" data-url="https://calendly.com/nikola-tosic-pieetas/booking-system"
-		style="min-width:320px;height:700px;"></div>
-	<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-	<!-- Calendly inline widget end -->
 
 	<!-- Banner -->
 	<section id="banner">
@@ -55,6 +54,10 @@
 			Turn website visitors into booked cosmetic consultations.<br />
 			Built from scratch or optimized around your existing process.
 		</p>
+    <button
+      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nikola-tosic-pieetas/booking-system'});return false;">Schedule call
+      with me
+    </button>
 	</section>
 
 	<section id="part1" class="wrapper style1">
@@ -66,20 +69,6 @@
 							<h2 style="text-transform: capitalize;">Booking System</h2>
 							<p>Designed to turn interested visitors into scheduled cosmetic consultations</p>
 						</header>
-
-						<!-- Calendly link widget begin -->
-						<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-						<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
-							async></script>
-						<button
-							onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nikola-tosic-pieetas/booking-system'});return false;">Schedule
-							with me
-						</button>
-						<a href=""
-							onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nikola-tosic-pieetas/booking-system'});return false;">Schedule
-							time with me</a>
-						<!-- Calendly link widget end -->
-
 						<p>
 							This is the system I reached out about. The idea is simple: <strong>improve every step</strong>
 							between a potential patient discovering your practice and walking through your
@@ -269,6 +258,12 @@
 		</div>
 	</section>
 
+	<!-- Calendly inline widget begin -->
+	<div id="contact" class="calendly-inline-widget" data-url="https://calendly.com/nikola-tosic-pieetas/booking-system"
+		style="min-width:320px;height:700px;"></div>
+	<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+	<!-- Calendly inline widget end -->
+
 	<!-- Footer -->
 	<div id="footer">
 		<div class="container">
@@ -314,10 +309,8 @@
 	<script src="assets/js/pieetasMain.js"></script>
 	<script src="assets/js/pieetasEvents.js"></script>
 	<!-- Calendly badge widget begin -->
-	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 	<script
-		type="text/javascript">window.onload = function () {Calendly.initBadgeWidget({url: 'https://calendly.com/nikola-tosic-pieetas/booking-system', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true});}</script>
+		type="text/javascript">window.onload = function () {Calendly.initBadgeWidget({url: 'https://calendly.com/nikola-tosic-pieetas/booking-system', text: 'Schedule call with me', color: '#292929', textColor: '#ffffff', branding: true});}</script>
 	<!-- Calendly badge widget end -->
 	<script src="assets/js/pieetasDate.js"></script>
 </body>
