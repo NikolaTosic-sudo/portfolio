@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Nikola Tosic</title>
+    <link rel="icon" type="image/x-icon" href="images/n.ico" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/bf1ba4899d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/loading.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper-->
+    <div id="wrapper">
+      <!-- Nav -->
+      <nav id="nav">
+        <a href="#portfolio" class="icon solid fa-briefcase"><span>Portfolio</span></a>
+        <a href="#offer" class="icon solid fa-dollar-sign"><span>Offer</span></a>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Me -->
+        <article id="portfolio" class="panel intro">
+            <button onclick="changeView('./portfolio')" class="view-card">View my Portfolio</button>
+        </article>
+
+        <!-- Work -->
+        <article id="offer" class="panel intro intro-left">
+            <button onclick="changeView('./pieetas')" class="view-card">View my Offer</button>
+        </article>
+
+      <!-- Footer -->
+      <div id="footer">
+        <ul class="copyright">
+			    <li>&copy; Nikola Tosic</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/loadingUtil.js"></script>
+    <script src="assets/js/loadingMain.js"></script>
+  </body>
+</html>
